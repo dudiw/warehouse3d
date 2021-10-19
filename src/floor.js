@@ -7,7 +7,7 @@ export default class Floor {
     this.obstacles = [];
     this.shelves = new THREE.Object3D();
 
-    const SHELF_URL = '/assets/shelf2/shelf2.gltf';
+    const SHELF_URL = '../assets/shelf2/shelf2.gltf';
 
     // Instantiate a loader
     var that = this;
@@ -17,7 +17,7 @@ export default class Floor {
       that.addShelves()
     });
 
-    var shadow = new THREE.TextureLoader().load('/assets/drop-shadow.png', undefined, function(texture) {
+    var shadow = new THREE.TextureLoader().load('../assets/drop-shadow.png', undefined, function(texture) {
       var tex = texture.clone();
       tex.needsUpdate = true;
     });
