@@ -1,8 +1,8 @@
 import Arena from './arena.js';
 import Camera from './camera.js';
 
-export function main(context) {
-  window.GLTFLoader = context.GLTFLoader;
+export function main() {
+  var context = {};
   const canvas = document.querySelector('#c');
   context.width = window.innerWidth;
   context.height = window.innerHeight;
@@ -66,7 +66,7 @@ export function main(context) {
     };
 
     callback(data);
-  }
+  };
 
   loadGameData(url, function(data) {
     context.game = data;
@@ -76,7 +76,7 @@ export function main(context) {
     
     const arena = new Arena(context);
     arena.load(data); 
-    arena.resize()
+    arena.resize();
     arena.resetTime();
     arena.update();
   });

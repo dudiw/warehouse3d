@@ -1,6 +1,6 @@
-import { PathGeometry, PathPointList, PathTubeGeometry } from './lib/three.path.js';
+import { PathGeometry, PathPointList, PathTubeGeometry } from '../lib/three.path.js';
 
-var colors = [
+const colors = [
   '#ed6a5a',
   '#f4f1bb',
   '#9bc1bc',

@@ -17,14 +17,13 @@
     window.THREE = THREE;
 
     import { OrbitControls } from 'https://cdn.skypack.dev/three@0.130.1/examples/jsm/controls/OrbitControls.js';
-    import { BufferGeometryUtils } from 'https://cdn.skypack.dev/three@0.130.1/examples/jsm/utils/BufferGeometryUtils.js';
     import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.130.1/examples/jsm/loaders/GLTFLoader.js';
-    import { SkeletonUtils } from 'https://cdn.skypack.dev/three@0.130.1/examples/jsm/utils/SkeletonUtils.js';
+
+    window.OrbitControls = OrbitControls;
+    window.GLTFLoader = GLTFLoader;
 
     import { main } from './app.js';
-
-    const context = {THREE, OrbitControls, BufferGeometryUtils, GLTFLoader, SkeletonUtils};
-    main(context);
+    main();
   </script>
 
 </body>

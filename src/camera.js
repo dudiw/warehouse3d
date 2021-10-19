@@ -12,7 +12,6 @@ export default class Camera {
     this.camera.position.z = dimension;
     this.camera.position.y = 1.2 * dimension;
 
-    var OrbitControls = context.OrbitControls;
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.controls.enableKeys = false;
     this.controls.enableDamping = true;
