@@ -80,7 +80,7 @@ export default class Arena {
       this.agents.set(agent_id, agent);
     }
 
-    const ROOMBA = 'assets/roomba2/roomba2.gltf';
+    const ROOMBA = './assets/roomba2/roomba2.gltf';
 
     var that = this;
     const loader = new GLTFLoader();
