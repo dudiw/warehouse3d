@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <title>Smart Warehouse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="c"></canvas>
+  <!-- CDN Link to Three.js -->
+  <script type="module">
+    // Find the latest version by visiting https://cdn.skypack.dev/three.
+    import * as THREE from 'https://cdn.skypack.dev/three@0.130.1';
+    window.THREE = THREE;
+
+    import { OrbitControls } from 'https://cdn.skypack.dev/three@0.130.1/examples/jsm/controls/OrbitControls.js';
+    import { BufferGeometryUtils } from 'https://cdn.skypack.dev/three@0.130.1/examples/jsm/utils/BufferGeometryUtils.js';
+    import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.130.1/examples/jsm/loaders/GLTFLoader.js';
+    import { SkeletonUtils } from 'https://cdn.skypack.dev/three@0.130.1/examples/jsm/utils/SkeletonUtils.js';
+
+    import { main } from './app.js';
+
+    const context = {THREE, OrbitControls, BufferGeometryUtils, GLTFLoader, SkeletonUtils};
+    main(context);
+  </script>
+
+</body>
+</html>
