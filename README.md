@@ -1,8 +1,8 @@
 # warehouse3d
 The `warehouse3d` project is a visualization tool for inspecting Multi-agent 
-dynamics in a smart-warehouse scenario.
+dynamics in autonomous-warehouses. 
 
-See it [Live](https://dudiw.github.io/warehouse3d/).
+Click to see a live [Demo](https://dudiw.github.io/warehouse3d/).
 
 ### Usage Notes
 Coordinates are denoted by `(row, column)`.  
@@ -31,8 +31,10 @@ For example:
 ``` 
 Agent-paths are described as discrete coordinates, each spanning a single timestep.
 For example:
-```json
-  [[3, 1], [4, 1], [5, 1], ..., [9, 14], [9, 15]]
+```json5
+[
+  [3, 1], [4, 1], [5, 1], [6, 1], //...
+]
 ```
 
 ### Attribution
