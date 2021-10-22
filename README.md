@@ -4,10 +4,10 @@ dynamics in autonomous-warehouses.
 
 Click to see a live [Demo](https://dudiw.github.io/warehouse3d/).
 
-<div align="left" styles="width:240px;">
+<div style="width:400px;clip-path: inset(1px 1px);">
   <img src="https://storage.googleapis.com/macro-fence-2015.appspot.com/lab/warehouse3d.gif"></img>
 </div>
-  
+
 ### Usage Notes
 Coordinates are denoted by `(row, column)`.  
 The floorplan is described as a 2D array, with `*` marking a blocked tile.  
