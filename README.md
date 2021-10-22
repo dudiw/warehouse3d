@@ -4,10 +4,8 @@ dynamics in autonomous-warehouses.
 
 Click to see a live [Demo](https://dudiw.github.io/warehouse3d/).
 
-<div>
-<video controls width="400" controls Autoplay=autoplay loop>
-    <source src="https://storage.googleapis.com/macro-fence-2015.appspot.com/lab/warehouse3d.mov#t=0.1" />
-</video>
+<div align="left" styles="width:240px;">
+  <img src="https://storage.googleapis.com/macro-fence-2015.appspot.com/lab/warehouse3d.gif"></img>
 </div>
   
 ### Usage Notes
