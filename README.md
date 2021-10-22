@@ -4,8 +4,8 @@ dynamics in autonomous-warehouses.
 
 Click to see a live [Demo](https://dudiw.github.io/warehouse3d/).
 
-<div style="width:400px;clip-path: inset(1px 1px);">
-  <img src="https://storage.googleapis.com/macro-fence-2015.appspot.com/lab/warehouse3d.gif"></img>
+<div>
+  <img src="https://storage.googleapis.com/macro-fence-2015.appspot.com/lab/warehouse3d.gif" style="width:400px;clip-path: inset(1px 1px);"></img>
 </div>
 
 ### Usage Notes
