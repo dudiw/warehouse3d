@@ -147,6 +147,14 @@ export default class Arena {
       agent.updateAgentState(state);
       agent.showTrajectory(state.progress);
     }
+
+    // TODO: move obstacle
+    var target = 18;
+    if (this.playback.timestamp >= 15) {
+      this.floor.moveShelf(target, states[0]);
+    } else {
+      this.floor.resetShelf(target);
+    }
   }
 
   resetTime() {
@@ -221,12 +229,16 @@ class Playback {
     this.fps = fps || 15;
     
     this.total = this.span * this.fps;
+
+    this.timestamp = 0;
+    this.orientations = {};
   }
 
   reset() { 
     this.startTime = 0;
     this.trajectories = new Map();
     this.hits = {};
+    this.orientations = {};
   }
 
   getTrajectory(agent) {
@@ -280,6 +292,8 @@ class Playback {
     var factor = progress % 1;
     var index = Math.floor(progress);
 
+    this.timestamp = index;
+
     if (fraction === 1) {
       this.reset();
     }
@@ -300,6 +314,10 @@ class Playback {
       if (index >= last) {
         var previous = path[last - 1];
         angle = Math.atan2(x - previous[1], z - previous[0]);
+      } else if (dx == 0.0 && dz == 0.0) {
+        angle = this.orientations[agent] || 0;
+      } else {
+        this.orientations[agent] = angle;
       }
 
       var location = {
@@ -309,7 +327,7 @@ class Playback {
       };
       result[agent] = {
         agent_id: agent,
-        team: agent % 2,
+        team: agent,
         location: location,
         orientation: {
           yaw: angle

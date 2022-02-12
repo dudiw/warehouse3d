@@ -1,21 +1,24 @@
 import { PathGeometry, PathPointList, PathTubeGeometry } from '../lib/three.path.js';
 
-const colors = [
-  '#ed6a5a',
-  '#f4f1bb',
-  '#9bc1bc',
-  '#5ca4a9',
-  '#e6ebe0',
+const COLORS = [
+  '#f4155b',
+  '#156Cf4',
+  '#f49d15',
+  '#6a32e6',
+  '#5bf415',
+  '#f25f5c',
+  '#247ba0',
   '#f0b67f',
+  '#9bc1bc',
   '#fe5f55',
+  '#f4f1bb',
   '#d6d1b1',
+  '#ed6a5a',
   '#c7efcf',
   '#eef5db',
   '#50514f',
-  '#f25f5c',
-  '#ffe066',
-  '#247ba0',
   '#70c1b3'
+  // '#e6ebe0',
 ];
 
 export default class Agent {
@@ -25,8 +28,8 @@ export default class Agent {
     this.info = info;
     this.width = this.context.game.width;
 
-    this.color = 1 === info.team ? 15996251 : 1404148;
-
+    this.color = COLORS[info.team % COLORS.length];
+    // this.color = 1 === info.team % 2 ? 15996251 : 1404148;
     var model = new THREE.Mesh(new THREE.CylinderGeometry(.16, .16, 0.29, 16, 1),
                               new THREE.MeshPhongMaterial({ color: this.color }));
     model.name = "player-model";

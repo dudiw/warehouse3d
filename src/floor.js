@@ -105,7 +105,7 @@ export default class Floor {
       shadowMat.depthFunc = THREE.LessEqualDepth;
       this.shadowMesh = new THREE.Mesh(new THREE.PlaneGeometry(1.8, 1.8, 4, 4), shadowMat);
       this.shadowMesh.name = "player-shadow";
-      this.shadowMesh.position.z = -.5;
+      this.shadowMesh.position.z = -.45;
     }
     for (var obstacle of this.obstacles) {
       var shelf = this.shelf.clone();
@@ -117,6 +117,23 @@ export default class Floor {
     }
     this.shelves.position.y = 0;
     this.context.scene.add(this.shelves);
+  }
+
+  moveShelf(index, state) {
+    if (index >= this.shelves.children.length) return;
+    var shelf = this.shelves.children[index];
+    var location = state.location;
+    shelf.position.set(location.x, 0.15, location.z);
+    shelf.rotation.y = state.orientation.yaw - 0.5 * Math.PI;
+  }
+
+  resetShelf(index) {
+    if (index >= this.shelves.children.length) return;
+    if (index >= this.obstacles.length) return;
+    var shelf = this.shelves.children[index];
+    var obstacle = this.obstacles[index];
+    shelf.position.set(obstacle.x, 0, obstacle.z);
+    shelf.rotation.y = 0;
   }
 
   addFloorGeometry(width, height, depth) {
