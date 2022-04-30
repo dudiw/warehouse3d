@@ -1,4 +1,4 @@
-import { PathGeometry, PathPointList, PathTubeGeometry } from '../lib/three.path.js';
+import { PathGeometry, PathPointList } from '../lib/three.path.js';
 
 const COLORS = [
   '#f4155b',

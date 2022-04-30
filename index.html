@@ -18,9 +18,11 @@
 
     import { OrbitControls } from 'https://cdn.skypack.dev/three@0.130.1/examples/jsm/controls/OrbitControls.js';
     import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.130.1/examples/jsm/loaders/GLTFLoader.js';
+    import * as Curves from 'https://cdn.skypack.dev/three@0.130.1/examples/jsm/curves/CurveExtras.js';
 
     window.OrbitControls = OrbitControls;
     window.GLTFLoader = GLTFLoader;
+    window.KnotCurve = Curves.Curves.KnotCurve;
 
     import { main } from './src/app.js';
     main();

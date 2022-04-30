@@ -1,5 +1,6 @@
 import Floor from "./floor.js";
 import Agent from './agent.js';
+import Drone from './drone.js';
 
 export default class Arena {
   constructor(context) {
@@ -80,6 +81,8 @@ export default class Arena {
       this.agents.set(agent_id, agent);
     }
 
+    this.drone = new Drone(this.context);
+
     const ROOMBA = './assets/roomba2/roomba2.gltf';
 
     var that = this;
@@ -147,6 +150,8 @@ export default class Arena {
       agent.updateAgentState(state);
       agent.showTrajectory(state.progress);
     }
+
+    this.drone.update();
 
     // TODO: move obstacle
     var target = 18;
