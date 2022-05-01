@@ -25,7 +25,7 @@ export default class Drone {
     const loader = new GLTFLoader();
     loader.load(DRONE, function(gltf) {
       let body = gltf.scene;
-      body.scale.set(10.5, 10.5, 10.5);
+      body.scale.set(0.3, 0.3, 0.3);
       that.scene.add(body);
       that.model.body = body;
       that.scene.add(that.model.shadow);
@@ -33,9 +33,13 @@ export default class Drone {
       that.mixer = new THREE.AnimationMixer(body);
 
       // Play a specific animation
-      const clip = THREE.AnimationClip.findByName(gltf.animations, 'hover');
+      let start = 2;
+      const clip = THREE.AnimationClip.findByName(gltf.animations, 'Take 01');
       const action = that.mixer.clipAction(clip);
+      action.time = start;
       action.play();
+
+      that.mixer.addEventListener('loop', function(_e) {action.time = start; });
     });
 
     // initialize motion curve
@@ -119,6 +123,6 @@ export default class Drone {
     this.model.shadow.position.set(this.position.x, .15, this.position.z);
 
     // update animation
-    this.mixer.update(this.clock.getDelta());
+    this.mixer.update();
   }
 }
