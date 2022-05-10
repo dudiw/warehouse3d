@@ -45,7 +45,11 @@ For example:
 The project utilizes [THREE.js](https://threejs.org/) and 
 [three.path](https://github.com/shawn0326/three.path) for managing the 3D scene.
 
-In addition, the project makes use of the [Amazon Prime shipping box](https://skfb.ly/ZoZO) model by [NikR](https://sketchfab.com/NikR) (licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/)).
+#### Assets
+The project attributes the following assets and their creators
+* [Amazon Prime shipping box](https://skfb.ly/ZoZO) by [NikR](https://sketchfab.com/NikR) (licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/)).  
+  
+* [S9 Mini Drone](https://sketchfab.com/3d-models/s9-mini-drone-cf3ed83c1b87486d90435f54c074e16e) by [BlueMesh](https://sketchfab.com/VapTor) (licensed under [Creative Commons Attribution](http://creativecommons.org/licenses/by/4.0/)).
 
 ### Upcoming Features
 * Functionality
