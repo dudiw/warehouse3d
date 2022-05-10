@@ -123,6 +123,6 @@ export default class Drone {
     this.model.shadow.position.set(this.position.x, .15, this.position.z);
 
     // update animation
-    this.mixer.update();
+    this.mixer.update(this.clock.getDelta());
   }
 }
